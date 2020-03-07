@@ -177,7 +177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unitIndex: 0
   rectTransform: {fileID: 5232416199137400297}
-  spriteMask: {fileID: 0}
+  childImage: {fileID: 3479720469284162855}
 --- !u!114 &2489611192209884282
 MonoBehaviour:
   m_ObjectHideFlags: 0

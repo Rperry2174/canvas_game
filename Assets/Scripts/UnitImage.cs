@@ -16,12 +16,25 @@ public class UnitImage : MonoBehaviour
     void Start()
     {
         layerName = unitIndex.ToString();
-        rectTransform.localPosition = new Vector3(0, 0, 0);
+        //rectTransform.localPosition = new Vector3(300, 0, 0);
         //AddMask();
     }
 
     public void MoveChildImage(Vector3 newPosition)
     {
+        // Move the child image into proper position
+        childImage.rectTransform.localPosition = newPosition;
+
+        //Move the mask to the proper (inverted) position
+        Vector3 inversionFactor = new Vector3(-1, -1, 1);
+        //rectTransform.localPosition = new Vector3(300, 0, 0);
+
+        Debug.Log("Moving to inverted position: " + Vector3.Scale(inversionFactor, newPosition));
+        rectTransform.localPosition = Vector3.Scale(inversionFactor, newPosition);
+        //Debug.Log("==============================================");
+        //Debug.Log("NewPosition: " + newPosition);
+        //Debug.Log("New Position Inverted: " + Vector3.Scale(inversionFactor, newPosition));
+        //Debug.Log("==============================================");
 
     }
 

@@ -34,6 +34,8 @@ public class ImageSpawner : MonoBehaviour
             //targetImage.GetComponent<Unit>().AddMask(GetLocationFromIndex(i));
             //targetImage.GetComponent<VideoPlayer>().clip = videoClip;
             targetImage.name = i.ToString();
+            targetImage.GetComponent<UnitImage>().MoveChildImage(GetLocationFromIndex(i));
+            //targetImage.GetComponent<UnitImage>().rectTransform.localPosition = new Vector3(0, 0, 0);
             //allUnits.Add(targetImage.GetComponent<Unit>());
         }
     }
@@ -41,16 +43,16 @@ public class ImageSpawner : MonoBehaviour
 
     public Vector3 GetLocationFromIndex(int index)
     {
-        int row;
-        int col;
+        int yLoc;
+        int xLoc;
 
-        col = index % 3;
+        xLoc = index % 3;
         if (index < 3) {
-            row = 0;
+            yLoc = 0;
         } else {
-            row = index / 3;
+            yLoc = index / 3;
         }
 
-        return new Vector3(-row * 300, col * 300, 0);
+        return new Vector3(-xLoc * 300, yLoc * 300, 0);
     }
 }
