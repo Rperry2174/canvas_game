@@ -7,6 +7,7 @@ public class ImageSpawner : MonoBehaviour
     public List<Unit> allUnits;
     public int numPieces = 9;
     public GameObject targetImagePrefab;
+    public int scaleFactor = 300;
 
     // Start is called before the first frame update
     void Start()
@@ -30,13 +31,10 @@ public class ImageSpawner : MonoBehaviour
                                           Quaternion.identity,
                                           gameObject.transform);
 
-            //targetImage.transform.localPosition = new Vector3(0, 0, 0);
-            //targetImage.transform.localScale = new Vector3(1, 1, 1);
-
-            // targetImage.GetComponent<Unit>().AddMask(GetLocationFromIndex(i));
+            //targetImage.GetComponent<Unit>().AddMask(GetLocationFromIndex(i));
             //targetImage.GetComponent<VideoPlayer>().clip = videoClip;
-            // targetImage.name = i.ToString();
-            // allUnits.Add(targetImage.GetComponent<Unit>());
+            targetImage.name = i.ToString();
+            //allUnits.Add(targetImage.GetComponent<Unit>());
         }
     }
 
@@ -46,13 +44,13 @@ public class ImageSpawner : MonoBehaviour
         int row;
         int col;
 
-        row = index % 3;
+        col = index % 3;
         if (index < 3) {
-            col = 0;
+            row = 0;
         } else {
-            col = index / 3;
+            row = index / 3;
         }
 
-        return new Vector3(row, -col, 0);
+        return new Vector3(-row * 300, col * 300, 0);
     }
 }

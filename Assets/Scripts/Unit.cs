@@ -20,8 +20,10 @@ public class Unit : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = inputSprite;
 
+        transform.localPosition = new Vector3(0, 0, 0);
+
+
         layerName = unitIndex.ToString();
-        //AddMask();
     }
 
     public void AddMask(Vector3 maskPosition)
