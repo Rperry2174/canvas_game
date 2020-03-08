@@ -18,6 +18,33 @@ public class CheckClicks : MonoBehaviour
 
     }
 
+    void CollisionAction(int unitIndex)
+    {
+        // Unselect unit if you are retapping on the currently selected unit
+        if (gameState.selectedUnitIndex == unitIndex)
+        {
+            Debug.Log("Retapping... Setting index to: " + unitIndex);
+            gameState.SelectUnit(-1);
+        }
+        else
+        {
+            bool unitIsAlreadySelected = gameState.selectedUnitIndex >= 0;
+
+            if (unitIsAlreadySelected)
+            {
+                Debug.Log("unitIsAlreadySelected swapping unit: " + gameState.selectedUnitIndex + " with " + unitIndex);
+
+                gameState.SwapUnits(gameState.selectedUnitIndex, unitIndex);
+                //gameState.CheckForWinner();
+            }
+            else
+            {
+                Debug.Log("Setting unit index to: " + unitIndex);
+                gameState.SelectUnit(unitIndex);
+            }
+        }
+    }
+
     void Update()
     {
         //Check if the left Mouse button is clicked
@@ -35,6 +62,10 @@ public class CheckClicks : MonoBehaviour
             foreach (RaycastResult result in results)
             {
                 Debug.Log("Hit " + result.gameObject.name);
+                if (result.gameObject.GetComponent<UnitImage>() != null)
+                {
+                    CollisionAction(result.gameObject.GetComponent<UnitImage>().unitIndex);
+                }
             }
         }
     }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameState : MonoBehaviour
 {
     public List<UnitImage> unitImageList;
-    public UnitImage selectedUnitImage;
+    public int selectedUnitIndex = -1;
 
     public int levelIndex = 0;
 
@@ -24,6 +24,13 @@ public class GameState : MonoBehaviour
         UnitImage tmp = unitImageList[indexA];
         unitImageList[indexA] = unitImageList[indexB];
         unitImageList[indexB] = tmp;
+
+        selectedUnitIndex = -1;
+    }
+
+    public void SelectUnit(int newIndex)
+    {
+        selectedUnitIndex = newIndex;
     }
 
 

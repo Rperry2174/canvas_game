@@ -34,6 +34,7 @@ public class ImageSpawner : MonoBehaviour
                                           gameObject.transform);
 
             targetImage.name = i.ToString();
+            targetImage.GetComponent<UnitImage>().unitIndex = i;
             targetImage.GetComponent<UnitImage>().MoveChildImage(GetLocationFromIndex(i));
             gameState.unitImageList.Add(targetImage.GetComponent<UnitImage>());
         }
