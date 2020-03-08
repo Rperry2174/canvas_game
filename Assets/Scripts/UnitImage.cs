@@ -8,7 +8,7 @@ public class UnitImage : MonoBehaviour
     public int unitIndex;
 
     public RectTransform rectTransform;
-    public Image childImage;
+    public RawImage childImage;
 
 
     private string layerName;
