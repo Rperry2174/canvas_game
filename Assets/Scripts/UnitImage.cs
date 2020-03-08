@@ -49,7 +49,7 @@ public class UnitImage : MonoBehaviour
         }
     }
 
-    public void moveTo(Vector3 endLocation, float time)
+    public void MoveTo(Vector3 endLocation, float time)
     {
         isMoving = true;
         LeanTween.moveLocal(gameObject, endLocation, time)

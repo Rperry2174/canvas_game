@@ -31,17 +31,11 @@ public class GameState : MonoBehaviour
         unitImageList[newUnitImage.currentIndex] = selectedUnitImage;
         unitImageList[selectedUnitImage.currentIndex] = tmp;
 
-        //newUnitImage.GetComponent<UnitImage>().isMoving = true;
-        //selectedUnitImage.GetComponent<UnitImage>().isMoving = true;
+        // Tell the swapping UnitImage(s) where to go to
+        newUnitImage.MoveTo(selectedUnitImage.GetComponent<UnitImage>().rectTransform.localPosition, tweenDuration);
+        selectedUnitImage.MoveTo(newUnitImage.GetComponent<UnitImage>().rectTransform.localPosition, tweenDuration);
 
-        newUnitImage.moveTo(selectedUnitImage.GetComponent<UnitImage>().rectTransform.localPosition, tweenDuration);
-        //LeanTween.moveLocal(newUnitImage.gameObject, selectedUnitImage.GetComponent<UnitImage>().rectTransform.localPosition, tweenDuration)
-        //    .setOnComplete(PauseActions).setOnCompleteParam(newUnitImage as object);
-        selectedUnitImage.moveTo(newUnitImage.GetComponent<UnitImage>().rectTransform.localPosition, tweenDuration);
-
-        //LeanTween.moveLocal(selectedUnitImage.gameObject, newUnitImage.GetComponent<UnitImage>().rectTransform.localPosition, tweenDuration)
-        //    .setOnComplete(PauseActions).setOnCompleteParam(selectedUnitImage as object);
-
+        // Reset selectedUnitImage to null
         selectedUnitImage = null;
     }
 
