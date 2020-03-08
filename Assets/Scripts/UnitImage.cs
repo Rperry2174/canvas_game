@@ -26,8 +26,6 @@ public class UnitImage : MonoBehaviour
     void Update()
     {
         SetCurrentIndex();
-        //SetIsMoving();
-
     }
 
     public void MoveChildImage(Vector3 newPosition)
@@ -51,28 +49,16 @@ public class UnitImage : MonoBehaviour
         }
     }
 
-    public void SetIsMoving()
-    {
-        Vector3 currentLocation = rectTransform.localPosition;
-        Vector3 expectedLocation = gameState.GetLocationFromIndex(currentIndex);
-
-        float dis = Vector3.Distance(currentLocation, expectedLocation);
-        if(currentIndex == 0)
-        {
-            Debug.Log("Current Location : " + currentLocation);
-            Debug.Log("Expected Location: " + expectedLocation);
-            Debug.Log("Distance         : " + dis);
-
-
-        }
-
-        //isMoving = currentLocation != expectedLocation;
-    }
-
     public void moveTo(Vector3 endLocation, float time)
     {
-        LeanTween.moveLocal(gameObject, endLocation, time);
+        isMoving = true;
+        LeanTween.moveLocal(gameObject, endLocation, time)
+                    .setOnComplete(ToggleIsMovingCallback).setOnCompleteParam(this as object);
     }
 
-
+    public void ToggleIsMovingCallback(object unitImageObj)
+    {
+        UnitImage unitImage = (UnitImage)unitImageObj;
+        unitImage.isMoving = false;
+    }
 }
