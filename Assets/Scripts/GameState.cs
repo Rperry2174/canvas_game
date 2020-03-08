@@ -5,7 +5,9 @@ using UnityEngine;
 public class GameState : MonoBehaviour
 {
     public List<UnitImage> unitImageList;
-    public int selectedUnitIndex = -1;
+    //public int selectedUnitIndex = -1;
+    //public Vector3 selectedUnitLocation;
+    public UnitImage selectedUnitImage;
 
     public int levelIndex = 0;
 
@@ -19,30 +21,55 @@ public class GameState : MonoBehaviour
 
     public State currentGameState = State.none;
 
-    public void SwapUnits(int indexA, int indexB)
+    public void SwapUnitsWith(UnitImage newUnitImage)
     {
-        UnitImage tmp = unitImageList[indexA];
-        unitImageList[indexA] = unitImageList[indexB];
-        unitImageList[indexB] = tmp;
+        Debug.Log("Swapping: " + selectedUnitImage.unitIndex + " with " + newUnitImage.unitIndex);
 
-        selectedUnitIndex = -1;
+        UnitImage tmp = newUnitImage;
+
+        unitImageList[newUnitImage.currentIndex] = selectedUnitImage;
+        unitImageList[selectedUnitImage.currentIndex] = tmp;
+
+        LeanTween.moveLocal(newUnitImage.gameObject, selectedUnitImage.GetComponent<UnitImage>().rectTransform.localPosition, 1.0f);
+        LeanTween.moveLocal(selectedUnitImage.gameObject, newUnitImage.GetComponent<UnitImage>().rectTransform.localPosition, 1.0f);
+
+        selectedUnitImage = null;
     }
 
-    public void SelectUnit(int newIndex)
+    public void SelectUnit(UnitImage newUnitImage)
     {
-        selectedUnitIndex = newIndex;
+        selectedUnitImage = newUnitImage;
+    }
+
+    public Vector3 GetLocationFromIndex(int index)
+    {
+        int yLoc;
+        int xLoc;
+
+        xLoc = index % 3;
+        if (index < 3)
+        {
+            yLoc = 0;
+        }
+        else
+        {
+            yLoc = index / 3;
+        }
+
+        return new Vector3(-xLoc * 300, yLoc * 300, 0);
     }
 
 
-    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        //if(selectedUnitImage != null)
+        //{
+        //    selectedUnitLocation = selectedUnitImage.rectTransform.localPosition;
+        //}
     }
 }

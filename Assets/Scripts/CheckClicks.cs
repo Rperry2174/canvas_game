@@ -18,30 +18,24 @@ public class CheckClicks : MonoBehaviour
 
     }
 
-    void CollisionAction(int unitIndex)
+    void CollisionAction(UnitImage currentUnitImage)
     {
         // Unselect unit if you are retapping on the currently selected unit
-        if (gameState.selectedUnitIndex == unitIndex)
+        if(gameState.selectedUnitImage == null)
         {
-            Debug.Log("Retapping... Setting index to: " + unitIndex);
-            gameState.SelectUnit(-1);
+            Debug.Log("Setting unit index to: " + currentUnitImage.unitIndex);
+            gameState.SelectUnit(currentUnitImage);
+        }
+        else if (gameState.selectedUnitImage.unitIndex == currentUnitImage.unitIndex)
+        {
+            Debug.Log("Retapping... " + gameState.selectedUnitImage.unitIndex + " Setting index to: " + null);
+            gameState.SelectUnit(null);
         }
         else
         {
-            bool unitIsAlreadySelected = gameState.selectedUnitIndex >= 0;
-
-            if (unitIsAlreadySelected)
-            {
-                Debug.Log("unitIsAlreadySelected swapping unit: " + gameState.selectedUnitIndex + " with " + unitIndex);
-
-                gameState.SwapUnits(gameState.selectedUnitIndex, unitIndex);
-                //gameState.CheckForWinner();
-            }
-            else
-            {
-                Debug.Log("Setting unit index to: " + unitIndex);
-                gameState.SelectUnit(unitIndex);
-            }
+            Debug.Log("unitIsAlreadySelected swapping unit: " + gameState.selectedUnitImage.unitIndex + " with " + currentUnitImage.unitIndex);
+            gameState.SwapUnitsWith(currentUnitImage);
+            //gameState.CheckForWinner();
         }
     }
 
@@ -64,7 +58,8 @@ public class CheckClicks : MonoBehaviour
                 Debug.Log("Hit " + result.gameObject.name);
                 if (result.gameObject.GetComponent<UnitImage>() != null)
                 {
-                    CollisionAction(result.gameObject.GetComponent<UnitImage>().unitIndex);
+                    UnitImage currentUnitImage = result.gameObject.GetComponent<UnitImage>();
+                    CollisionAction(currentUnitImage);
                 }
             }
         }
