@@ -48,19 +48,17 @@ public class GameState : MonoBehaviour
         selectedUnitImage = null;
     }
 
-    //public void SwapUnitsWith(UnitImage firstUnitImage, UnitImage newUnitImage, float tweenDuration)
-    //{
-    //    Debug.Log("Swapping: " + firstUnitImage.unitIndex + " with " + newUnitImage.unitIndex);
+    public void RespawnPieces()
+    {
+        for (int i = 0; i < unitImageList.Count; i++)
+        {
+            UnitImage tmpUnit = unitImageList[i];
+            Vector3 inversionFactor = new Vector3(-1, -1, 1);
+            Vector3 newLocation = Vector3.Scale(inversionFactor, GetLocationFromIndex(i));
 
-    //    UnitImage tmp = newUnitImage;
-
-    //    unitImageList[newUnitImage.currentIndex] = firstUnitImage;
-    //    unitImageList[firstUnitImage.currentIndex] = tmp;
-
-    //    // Tell the swapping UnitImage(s) where to go to
-    //    newUnitImage.MoveTo(firstUnitImage.GetComponent<UnitImage>().rectTransform.localPosition, tweenDuration);
-    //    firstUnitImage.MoveTo(newUnitImage.GetComponent<UnitImage>().rectTransform.localPosition, tweenDuration);
-    //}
+            tmpUnit.rectTransform.localPosition = newLocation;
+        }
+    }
 
     public void PauseActions(object unitImageObj)
     {

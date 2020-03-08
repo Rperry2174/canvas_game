@@ -17,7 +17,7 @@ public class ImageSpawner : MonoBehaviour
         SpawnPieces();
 
         gameState.ShuffleUnits();
-        RespawnPieces();
+        gameState.RespawnPieces();
     }
 
     // Update is called once per frame
@@ -42,23 +42,6 @@ public class ImageSpawner : MonoBehaviour
             gameState.unitImageList.Add(targetImage.GetComponent<UnitImage>());
         }
     }
-
-    public void RespawnPieces()
-    {
-        //gameState.ShuffleUnits();
-        for (int i = 0; i < gameState.unitImageList.Count; i++)
-        {
-            UnitImage tmpUnit = gameState.unitImageList[i];
-            Debug.Log("Current unit index: " + tmpUnit.name);
-            Debug.Log("newLocation: " + GetLocationFromIndex(i));
-            Debug.Log("=======================");
-
-            Vector3 inversionFactor = new Vector3(-1, -1, 1);
-            Vector3 newLocation = Vector3.Scale(inversionFactor, GetLocationFromIndex(i));
-            tmpUnit.rectTransform.localPosition = newLocation;
-        }
-    }
-
 
     public Vector3 GetLocationFromIndex(int index)
     {
