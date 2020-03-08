@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitImageList: []
-  selectedUnitIndex: -1
+  selectedUnitImage: {fileID: 0}
+  tweenDuration: 0.5
   levelIndex: 0
   currentGameState: 0

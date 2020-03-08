@@ -197,17 +197,17 @@ PrefabInstance:
     - target: {fileID: 4141664512575755538, guid: b7539b8a4de02403bb7a53e5733a5571,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -37.29824
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4141664512575755538, guid: b7539b8a4de02403bb7a53e5733a5571,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 598.67957
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4141664512575755538, guid: b7539b8a4de02403bb7a53e5733a5571,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3572.7253
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4141664512575755538, guid: b7539b8a4de02403bb7a53e5733a5571,
         type: 3}
@@ -253,11 +253,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameState
-      objectReference: {fileID: 0}
-    - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
-        type: 3}
-      propertyPath: tweenDuration
-      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7539b8a4de02403bb7a53e5733a5571, type: 3}
@@ -377,11 +372,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 4690159565388152286, guid: 222a0139458e443199d4a4a4779a0c0e,
-        type: 3}
-      propertyPath: m_MatchWidthOrHeight
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 222a0139458e443199d4a4a4779a0c0e, type: 3}
