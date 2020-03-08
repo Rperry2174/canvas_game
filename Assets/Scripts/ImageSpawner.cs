@@ -15,9 +15,6 @@ public class ImageSpawner : MonoBehaviour
     {
         gameState = FindObjectOfType<GameState>();
         SpawnPieces();
-
-        gameState.ShuffleUnits();
-        gameState.RespawnPieces();
     }
 
     // Update is called once per frame

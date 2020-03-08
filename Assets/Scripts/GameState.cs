@@ -7,13 +7,14 @@ public class GameState : MonoBehaviour
     public List<UnitImage> unitImageList;
     public UnitImage selectedUnitImage;
     public float tweenDuration = 0.5f;
+    public int correctPiecesCount;
 
     public int levelIndex = 0;
 
     public enum State
     {
         none,
-        title,
+        levelTitle,
         gamePlay,
         levelComplete
     }
@@ -24,11 +25,18 @@ public class GameState : MonoBehaviour
     void Start()
     {
         //ShuffleUnits();
+        currentGameState = State.levelTitle;
     }
 
     void Update()
     {
+        CheckForWinner();
+    }
 
+    public void StartGame()
+    {
+        ShuffleUnits();
+        RespawnPieces();
     }
 
     public void SwapUnitsWith(UnitImage newUnitImage)
@@ -102,5 +110,23 @@ public class GameState : MonoBehaviour
         }
 
         return new Vector3(-xLoc * 300, yLoc * 300, 0);
+    }
+
+    public void CheckForWinner()
+    {
+        correctPiecesCount = 0;
+
+        for (int i = 0; i < unitImageList.Count; i++)
+        {
+            if (unitImageList[i].unitIndex == i)
+            {
+                correctPiecesCount += 1;
+            }
+        }
+
+        if (correctPiecesCount == unitImageList.Count)
+        {
+            currentGameState = GameState.State.levelComplete;
+        }
     }
 }
