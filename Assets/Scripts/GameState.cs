@@ -5,10 +5,8 @@ using UnityEngine;
 public class GameState : MonoBehaviour
 {
     public List<UnitImage> unitImageList;
-    //public int selectedUnitIndex = -1;
-    //public Vector3 selectedUnitLocation;
     public UnitImage selectedUnitImage;
-    public float tweenDuration = 10.9f;
+    public float tweenDuration = 0.5f;
 
     public int levelIndex = 0;
 
@@ -21,6 +19,17 @@ public class GameState : MonoBehaviour
     }
 
     public State currentGameState = State.none;
+
+
+    void Start()
+    {
+        //ShuffleUnits();
+    }
+
+    void Update()
+    {
+
+    }
 
     public void SwapUnitsWith(UnitImage newUnitImage)
     {
@@ -39,13 +48,27 @@ public class GameState : MonoBehaviour
         selectedUnitImage = null;
     }
 
+    //public void SwapUnitsWith(UnitImage firstUnitImage, UnitImage newUnitImage, float tweenDuration)
+    //{
+    //    Debug.Log("Swapping: " + firstUnitImage.unitIndex + " with " + newUnitImage.unitIndex);
+
+    //    UnitImage tmp = newUnitImage;
+
+    //    unitImageList[newUnitImage.currentIndex] = firstUnitImage;
+    //    unitImageList[firstUnitImage.currentIndex] = tmp;
+
+    //    // Tell the swapping UnitImage(s) where to go to
+    //    newUnitImage.MoveTo(firstUnitImage.GetComponent<UnitImage>().rectTransform.localPosition, tweenDuration);
+    //    firstUnitImage.MoveTo(newUnitImage.GetComponent<UnitImage>().rectTransform.localPosition, tweenDuration);
+    //}
+
     public void PauseActions(object unitImageObj)
     {
         UnitImage unitImage = (UnitImage)unitImageObj;
         unitImage.isMoving = false;
     }
 
-    public void ShufflePieces()
+    public void ShuffleUnits()
     {
         var count = unitImageList.Count;
         var last = count - 1;
@@ -56,6 +79,7 @@ public class GameState : MonoBehaviour
             unitImageList[i] = unitImageList[r];
             unitImageList[r] = tmp;
 
+            //SwapUnitsWith(unitImageList[i], unitImageList[r], 0.0f);
         }
     }
 
@@ -80,19 +104,5 @@ public class GameState : MonoBehaviour
         }
 
         return new Vector3(-xLoc * 300, yLoc * 300, 0);
-    }
-
-
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        //if(selectedUnitImage != null)
-        //{
-        //    selectedUnitLocation = selectedUnitImage.rectTransform.localPosition;
-        //}
     }
 }

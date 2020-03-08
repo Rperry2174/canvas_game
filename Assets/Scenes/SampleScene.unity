@@ -257,7 +257,7 @@ PrefabInstance:
     - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
         type: 3}
       propertyPath: tweenDuration
-      value: 10
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7539b8a4de02403bb7a53e5733a5571, type: 3}

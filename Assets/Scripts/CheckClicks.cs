@@ -20,6 +20,12 @@ public class CheckClicks : MonoBehaviour
 
     void CollisionAction(UnitImage currentUnitImage)
     {
+        // Guard against trying to move already moving units
+        if(currentUnitImage.isMoving)
+        {
+            return;
+        }
+
         // Unselect unit if you are retapping on the currently selected unit
         if(gameState.selectedUnitImage == null)
         {
