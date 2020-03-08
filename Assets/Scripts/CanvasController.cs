@@ -12,11 +12,21 @@ public class CanvasController : MonoBehaviour
     public GameObject levelTitlePanel;
     public GameObject levelCompletePanel;
     public GameObject gamePlayPanel;
+    public GameObject backgroundImage;
+    public GameObject zigZagImage;
+
+    public Color backgroundColor = Color.white;
+    public Color zigZagColor = Color.white;
 
     // Start is called before the first frame update
     void Start()
     {
         gameState = FindObjectOfType<GameState>();
+
+        Debug.Log("Currnet color: " + backgroundImage.GetComponent<Image>().color);
+        backgroundImage.GetComponent<Image>().color = backgroundColor;
+        zigZagImage.GetComponent<Image>().color = zigZagColor;
+
     }
 
     // Update is called once per frame
