@@ -38,7 +38,8 @@ public class CanvasController : MonoBehaviour
         }
         else
         {
-            slider.value = gameState.correctPiecesCount / (float)gameState.unitImageList.Count;
+            slider.value = Mathf.Max(gameState.correctPiecesCount / (float)gameState.unitImageList.Count, 0.10f);
+
             numCorrectText.text = gameState.correctPiecesCount.ToString() + " / " + gameState.unitImageList.Count.ToString();
         }
     }
