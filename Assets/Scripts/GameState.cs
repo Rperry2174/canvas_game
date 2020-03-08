@@ -19,6 +19,13 @@ public class GameState : MonoBehaviour
 
     public State currentGameState = State.none;
 
+    public void SwapUnits(int indexA, int indexB)
+    {
+        UnitImage tmp = unitImageList[indexA];
+        unitImageList[indexA] = unitImageList[indexB];
+        unitImageList[indexB] = tmp;
+    }
+
 
     // Start is called before the first frame update
     void Start()
