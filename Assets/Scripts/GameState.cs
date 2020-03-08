@@ -37,6 +37,7 @@ public class GameState : MonoBehaviour
     {
         ShuffleUnits();
         RespawnPieces();
+        currentGameState = State.gamePlay;
     }
 
     public void SwapUnitsWith(UnitImage newUnitImage)
@@ -124,9 +125,9 @@ public class GameState : MonoBehaviour
             }
         }
 
-        if (correctPiecesCount == unitImageList.Count)
+        if (correctPiecesCount == unitImageList.Count && currentGameState == State.gamePlay)
         {
-            currentGameState = GameState.State.levelComplete;
+            currentGameState = State.levelComplete;
         }
     }
 }
