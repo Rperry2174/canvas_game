@@ -8,6 +8,7 @@ public class GameState : MonoBehaviour
     //public int selectedUnitIndex = -1;
     //public Vector3 selectedUnitLocation;
     public UnitImage selectedUnitImage;
+    public float tweenDuration = 0.5f;
 
     public int levelIndex = 0;
 
@@ -30,8 +31,8 @@ public class GameState : MonoBehaviour
         unitImageList[newUnitImage.currentIndex] = selectedUnitImage;
         unitImageList[selectedUnitImage.currentIndex] = tmp;
 
-        LeanTween.moveLocal(newUnitImage.gameObject, selectedUnitImage.GetComponent<UnitImage>().rectTransform.localPosition, 1.0f);
-        LeanTween.moveLocal(selectedUnitImage.gameObject, newUnitImage.GetComponent<UnitImage>().rectTransform.localPosition, 1.0f);
+        LeanTween.moveLocal(newUnitImage.gameObject, selectedUnitImage.GetComponent<UnitImage>().rectTransform.localPosition, tweenDuration);
+        LeanTween.moveLocal(selectedUnitImage.gameObject, newUnitImage.GetComponent<UnitImage>().rectTransform.localPosition, tweenDuration);
 
         selectedUnitImage = null;
     }
