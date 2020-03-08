@@ -9,12 +9,14 @@ public class UnitImage : MonoBehaviour
 
     public RectTransform rectTransform;
     public RawImage childImage;
-
+    public GameState gameState;
 
     private string layerName;
 
+
     void Start()
     {
+        gameState = FindObjectOfType<GameState>();
         layerName = unitIndex.ToString();
         //rectTransform.localPosition = new Vector3(300, 0, 0);
         //AddMask();
