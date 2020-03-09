@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Video;
 
 public class UnitImage : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class UnitImage : MonoBehaviour
     public GameState gameState;
     public GameObject selectedFrame;
 
+    public VideoPlayer videoPlayer;
+    public VideoClip inputClip;
+
     private string layerName;
 
 
@@ -22,6 +26,7 @@ public class UnitImage : MonoBehaviour
         gameState = FindObjectOfType<GameState>();
         layerName = unitIndex.ToString();
         currentIndex = unitIndex;
+        videoPlayer.clip = inputClip;
     }
 
     void Update()

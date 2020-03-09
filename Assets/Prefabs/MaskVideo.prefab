@@ -40,7 +40,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 897613409263304690}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 2e762ed465239477ea32aecdf2452191, type: 3}
+  m_VideoClip: {fileID: 0}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -180,6 +180,8 @@ MonoBehaviour:
   childImage: {fileID: 1150905026151804470}
   gameState: {fileID: 0}
   selectedFrame: {fileID: 4884669873735332438}
+  videoPlayer: {fileID: 1218788894974448714}
+  inputClip: {fileID: 32900000, guid: 2e762ed465239477ea32aecdf2452191, type: 3}
 --- !u!114 &7379871289270191740
 MonoBehaviour:
   m_ObjectHideFlags: 0
