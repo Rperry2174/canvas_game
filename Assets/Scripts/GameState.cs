@@ -46,6 +46,18 @@ public class GameState : MonoBehaviour
     public void GoToNextLevel()
     {
         levelIndex += 1;
+        unitImageList.Clear();
+
+        var allImageSpawners = FindObjectsOfType<ImageSpawner>();
+        foreach(ImageSpawner imageSpawner in allImageSpawners)
+        {
+            imageSpawner.DestroyPieces();
+        };
+        foreach (ImageSpawner imageSpawner in allImageSpawners)
+        {
+            imageSpawner.SpawnPieces();
+        };
+
         ShuffleUnits();
         RespawnPieces();
         ResetBoard();

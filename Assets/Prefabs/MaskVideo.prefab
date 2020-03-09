@@ -51,8 +51,8 @@ VideoPlayer:
   m_RenderMode: 2
   m_AspectRatio: 2
   m_DataSource: 0
-  m_PlaybackSpeed: 1.32
-  m_AudioOutputMode: 2
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 0
   m_TargetAudioSources:
   - {fileID: 0}
   m_DirectAudioVolumes:
@@ -181,7 +181,6 @@ MonoBehaviour:
   gameState: {fileID: 0}
   selectedFrame: {fileID: 4884669873735332438}
   videoPlayer: {fileID: 1218788894974448714}
-  inputClip: {fileID: 0}
 --- !u!114 &7379871289270191740
 MonoBehaviour:
   m_ObjectHideFlags: 0

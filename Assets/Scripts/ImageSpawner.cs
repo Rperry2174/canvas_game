@@ -45,6 +45,15 @@ public class ImageSpawner : MonoBehaviour
         }
     }
 
+    // Only called the first time pieces spawn
+    public void DestroyPieces()
+    {
+        foreach (Transform child in transform)
+        {
+            Destroy(child.gameObject);
+        }
+    }
+
     public Vector3 GetLocationFromIndex(int index)
     {
         int yLoc;

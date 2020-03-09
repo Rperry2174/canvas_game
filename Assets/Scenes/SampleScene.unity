@@ -560,6 +560,11 @@ PrefabInstance:
       objectReference: {fileID: 2520057}
     - target: {fileID: 6971654271776284801, guid: e53e5e9ca1ff04ab389bd3992e88024e,
         type: 3}
+      propertyPath: levelCompletePanel
+      value: 
+      objectReference: {fileID: 4690159564385394532}
+    - target: {fileID: 6971654271776284801, guid: e53e5e9ca1ff04ab389bd3992e88024e,
+        type: 3}
       propertyPath: gamePlayPanel
       value: 
       objectReference: {fileID: 1719680442}
@@ -573,11 +578,6 @@ PrefabInstance:
       propertyPath: zigZagImage
       value: 
       objectReference: {fileID: 224816344}
-    - target: {fileID: 6971654271776284801, guid: e53e5e9ca1ff04ab389bd3992e88024e,
-        type: 3}
-      propertyPath: levelCompletePanel
-      value: 
-      objectReference: {fileID: 4690159564385394532}
     - target: {fileID: 6971654271776284830, guid: e53e5e9ca1ff04ab389bd3992e88024e,
         type: 3}
       propertyPath: m_Name
