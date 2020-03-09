@@ -16,6 +16,7 @@ public class UnitImage : MonoBehaviour
     public GameObject selectedFrame;
 
     public VideoPlayer videoPlayer;
+    public bool isAnswerKeyChild;
     private string layerName;
 
 
@@ -24,20 +25,35 @@ public class UnitImage : MonoBehaviour
         gameState = FindObjectOfType<GameState>();
         layerName = unitIndex.ToString();
         currentIndex = unitIndex;
-        videoPlayer.clip = gameState.targetVideoClipsArr[gameState.levelIndex]; ;
+        videoPlayer.clip = gameState.targetVideoClipsArr[gameState.levelIndex];
+        isAnswerKeyChild = gameObject.transform.parent.GetComponent<ImageSpawner>().isAnswerKey;
     }
 
     void Update()
     {
         SetCurrentIndex();
-        if(gameState.selectedUnitImage != null && !gameObject.transform.parent.GetComponent<ImageSpawner>().isAnswerKey)
+        HighlightSelected();
+        HighlightCorrect();
+    }
+
+    public void HighlightSelected()
+    {
+        if (gameState.selectedUnitImage != null && !isAnswerKeyChild)
         {
             selectedFrame.SetActive(gameState.selectedUnitImage.unitIndex == unitIndex);
-        } else
+        }
+        else
         {
             selectedFrame.SetActive(false);
         }
+    }
 
+    public void HighlightCorrect()
+    {
+        if(isAnswerKeyChild && gameState.currentGameState == GameState.State.gamePlay)
+        {
+            selectedFrame.SetActive(gameState.unitImageList[unitIndex].unitIndex == unitIndex);
+        }
     }
 
     public void MoveChildImage(Vector3 newPosition)
