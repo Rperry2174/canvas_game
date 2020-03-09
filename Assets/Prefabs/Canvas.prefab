@@ -329,6 +329,7 @@ MonoBehaviour:
   scaleFactor: 300
   gameState: {fileID: 0}
   isAnswerKey: 1
+  inputClip: {fileID: 32900000, guid: 2e762ed465239477ea32aecdf2452191, type: 3}
 --- !u!1 &724246434
 GameObject:
   m_ObjectHideFlags: 0
@@ -422,6 +423,7 @@ MonoBehaviour:
   scaleFactor: 300
   gameState: {fileID: 0}
   isAnswerKey: 0
+  inputClip: {fileID: 32900000, guid: 2e762ed465239477ea32aecdf2452191, type: 3}
 --- !u!1 &1069619919
 GameObject:
   m_ObjectHideFlags: 0

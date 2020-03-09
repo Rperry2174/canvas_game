@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Video;
 
 public class ImageSpawner : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class ImageSpawner : MonoBehaviour
     public int scaleFactor = 300;
     public GameState gameState;
     public bool isAnswerKey = false;
+    public VideoClip inputClip;
+
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +38,7 @@ public class ImageSpawner : MonoBehaviour
                                           gameObject.transform);
 
             targetImage.name = i.ToString();
+            targetImage.GetComponent<UnitImage>().inputClip = inputClip;
             targetImage.GetComponent<UnitImage>().unitIndex = i;
             targetImage.GetComponent<UnitImage>().MoveChildImage(GetLocationFromIndex(i));
             if(!isAnswerKey)
