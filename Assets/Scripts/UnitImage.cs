@@ -12,6 +12,7 @@ public class UnitImage : MonoBehaviour
     public RectTransform rectTransform;
     public RawImage childImage;
     public GameState gameState;
+    public GameObject selectedFrame;
 
     private string layerName;
 
@@ -26,6 +27,14 @@ public class UnitImage : MonoBehaviour
     void Update()
     {
         SetCurrentIndex();
+        if(gameState.selectedUnitImage != null && !gameObject.transform.parent.GetComponent<ImageSpawner>().isAnswerKey)
+        {
+            selectedFrame.SetActive(gameState.selectedUnitImage.unitIndex == unitIndex);
+        } else
+        {
+            selectedFrame.SetActive(false);
+        }
+
     }
 
     public void MoveChildImage(Vector3 newPosition)
