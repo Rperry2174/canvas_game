@@ -9,6 +9,7 @@ public class ImageSpawner : MonoBehaviour
     public GameObject targetImagePrefab;
     public int scaleFactor = 300;
     public GameState gameState;
+    public bool isAnswerKey = false;
 
     // Start is called before the first frame update
     void Start()
@@ -36,7 +37,10 @@ public class ImageSpawner : MonoBehaviour
             targetImage.name = i.ToString();
             targetImage.GetComponent<UnitImage>().unitIndex = i;
             targetImage.GetComponent<UnitImage>().MoveChildImage(GetLocationFromIndex(i));
-            gameState.unitImageList.Add(targetImage.GetComponent<UnitImage>());
+            if(!isAnswerKey)
+            {
+                gameState.unitImageList.Add(targetImage.GetComponent<UnitImage>());
+            }
         }
     }
 
