@@ -458,8 +458,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 8852162528968569042, guid: 222a0139458e443199d4a4a4779a0c0e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 284499359}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 222a0139458e443199d4a4a4779a0c0e, type: 3}
+--- !u!1 &4690159564385394532 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5765125387491882211, guid: 222a0139458e443199d4a4a4779a0c0e,
+    type: 3}
+  m_PrefabInstance: {fileID: 4690159564385394531}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6971654269932187505
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -562,6 +573,11 @@ PrefabInstance:
       propertyPath: zigZagImage
       value: 
       objectReference: {fileID: 224816344}
+    - target: {fileID: 6971654271776284801, guid: e53e5e9ca1ff04ab389bd3992e88024e,
+        type: 3}
+      propertyPath: levelCompletePanel
+      value: 
+      objectReference: {fileID: 4690159564385394532}
     - target: {fileID: 6971654271776284830, guid: e53e5e9ca1ff04ab389bd3992e88024e,
         type: 3}
       propertyPath: m_Name

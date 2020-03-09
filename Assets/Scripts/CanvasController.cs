@@ -36,7 +36,7 @@ public class CanvasController : MonoBehaviour
 
         levelTitlePanel.gameObject.SetActive(gameState.currentGameState == GameState.State.levelTitle);
         slider.gameObject.SetActive(gameState.currentGameState == GameState.State.gamePlay);
-
+        levelCompletePanel.gameObject.SetActive(gameState.currentGameState == GameState.State.levelComplete);
 
         //levelCompletePanel.SetActive(gm.currentGameState == GameManager.GameState.levelComplete);
         //gamePlayPanel.SetActive(gm.currentGameState == GameManager.GameState.gamePlay || gm.currentGameState == GameManager.GameState.title);

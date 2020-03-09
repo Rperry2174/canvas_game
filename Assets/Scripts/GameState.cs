@@ -6,6 +6,8 @@ public class GameState : MonoBehaviour
 {
     public List<UnitImage> unitImageList;
     public UnitImage selectedUnitImage;
+    public GameObject[] targetVideoArr;
+
     public float tweenDuration = 0.5f;
     public int correctPiecesCount;
 
@@ -38,6 +40,21 @@ public class GameState : MonoBehaviour
         ShuffleUnits();
         RespawnPieces();
         currentGameState = State.gamePlay;
+    }
+
+    public void GoToNextLevel()
+    {
+        levelIndex += 1;
+        ShuffleUnits();
+        RespawnPieces();
+        ResetBoard();
+    }
+
+    public void ResetBoard()
+    {
+        selectedUnitImage = null;
+        currentGameState = State.levelTitle;
+
     }
 
     public void SwapUnitsWith(UnitImage newUnitImage)
