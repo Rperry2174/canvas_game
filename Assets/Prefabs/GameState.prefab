@@ -45,6 +45,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unitImageList: []
   selectedUnitImage: {fileID: 0}
+  targetVideoClipsArr:
+  - {fileID: 32900000, guid: 2e762ed465239477ea32aecdf2452191, type: 3}
+  - {fileID: 32900000, guid: 082e8583b3ac94d32a0b89cc31b7c77b, type: 3}
+  - {fileID: 32900000, guid: 068fc278aa1d243c0a7a41f2d5cdfd73, type: 3}
   tweenDuration: 0.5
+  correctPiecesCount: 0
   levelIndex: 0
   currentGameState: 0

@@ -16,8 +16,6 @@ public class UnitImage : MonoBehaviour
     public GameObject selectedFrame;
 
     public VideoPlayer videoPlayer;
-    public VideoClip inputClip;
-
     private string layerName;
 
 
@@ -26,7 +24,7 @@ public class UnitImage : MonoBehaviour
         gameState = FindObjectOfType<GameState>();
         layerName = unitIndex.ToString();
         currentIndex = unitIndex;
-        videoPlayer.clip = inputClip;
+        videoPlayer.clip = gameState.targetVideoClipsArr[gameState.levelIndex]; ;
     }
 
     void Update()

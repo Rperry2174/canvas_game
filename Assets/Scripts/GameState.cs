@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Video;
 
 public class GameState : MonoBehaviour
 {
     public List<UnitImage> unitImageList;
     public UnitImage selectedUnitImage;
-    public GameObject[] targetVideoArr;
+    public VideoClip[] targetVideoClipsArr;
 
     public float tweenDuration = 0.5f;
     public int correctPiecesCount;
