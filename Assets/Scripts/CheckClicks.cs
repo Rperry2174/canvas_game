@@ -26,8 +26,14 @@ public class CheckClicks : MonoBehaviour
             return;
         }
 
+        if (gameState.currentGameState == GameState.State.levelTitle)
+        {
+            gameState.StartGame();
+            return;
+        }
+
         // Unselect unit if you are retapping on the currently selected unit
-        if(gameState.selectedUnitImage == null)
+        if (gameState.selectedUnitImage == null)
         {
             Debug.Log("Setting unit index to: " + currentUnitImage.unitIndex);
             gameState.SelectUnit(currentUnitImage);

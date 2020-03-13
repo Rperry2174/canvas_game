@@ -58,8 +58,8 @@ public class GameState : MonoBehaviour
             imageSpawner.SpawnPieces();
         };
 
-        ShuffleUnits();
-        RespawnPieces();
+        //ShuffleUnits();
+        //RespawnPieces();
         ResetBoard();
     }
 

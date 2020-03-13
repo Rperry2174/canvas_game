@@ -326,6 +326,81 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameState
       objectReference: {fileID: 0}
+    - target: {fileID: 4141664512575755564, guid: b7539b8a4de02403bb7a53e5733a5571,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
+        type: 3}
+      propertyPath: targetVideoClipsArr.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
+        type: 3}
+      propertyPath: targetVideoClipsArr.Array.data[0]
+      value: 
+      objectReference: {fileID: 32900000, guid: 976e1337a4d4d4b65b721cb739bfaf77,
+        type: 3}
+    - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
+        type: 3}
+      propertyPath: targetVideoClipsArr.Array.data[1]
+      value: 
+      objectReference: {fileID: 32900000, guid: 51a9a3c5ce85a401b8033869eeca6bb6,
+        type: 3}
+    - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
+        type: 3}
+      propertyPath: targetVideoClipsArr.Array.data[2]
+      value: 
+      objectReference: {fileID: 32900000, guid: 962f3d0e37a9849f3ad1955116730d1f,
+        type: 3}
+    - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
+        type: 3}
+      propertyPath: targetVideoClipsArr.Array.data[3]
+      value: 
+      objectReference: {fileID: 32900000, guid: 2d3e62af557db4907b83d145e2830f3f,
+        type: 3}
+    - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
+        type: 3}
+      propertyPath: targetVideoClipsArr.Array.data[4]
+      value: 
+      objectReference: {fileID: 32900000, guid: 83fe48048dbbf4723a7773f4bfb782da,
+        type: 3}
+    - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
+        type: 3}
+      propertyPath: targetVideoClipsArr.Array.data[5]
+      value: 
+      objectReference: {fileID: 32900000, guid: c0048e9de142042478fac270840a2c2c,
+        type: 3}
+    - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
+        type: 3}
+      propertyPath: targetVideoClipsArr.Array.data[6]
+      value: 
+      objectReference: {fileID: 32900000, guid: 5b26c3284c0fd4e9ca34ecc0b1940367,
+        type: 3}
+    - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
+        type: 3}
+      propertyPath: targetVideoClipsArr.Array.data[7]
+      value: 
+      objectReference: {fileID: 32900000, guid: 62245a0edcb574e7a9ce0f0f5d8f0ccf,
+        type: 3}
+    - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
+        type: 3}
+      propertyPath: targetVideoClipsArr.Array.data[8]
+      value: 
+      objectReference: {fileID: 32900000, guid: 62245a0edcb574e7a9ce0f0f5d8f0ccf,
+        type: 3}
+    - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
+        type: 3}
+      propertyPath: targetVideoClipsArr.Array.data[9]
+      value: 
+      objectReference: {fileID: 32900000, guid: 6a00bf46eeace49d8a740302a8c93f97,
+        type: 3}
+    - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
+        type: 3}
+      propertyPath: levelIndex
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7539b8a4de02403bb7a53e5733a5571, type: 3}
 --- !u!1001 &4690159564385394531
@@ -341,10 +416,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 152431987, guid: 222a0139458e443199d4a4a4779a0c0e, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1007241627, guid: 222a0139458e443199d4a4a4779a0c0e, type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4091426370165854831, guid: 222a0139458e443199d4a4a4779a0c0e,
