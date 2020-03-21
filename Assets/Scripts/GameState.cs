@@ -12,7 +12,21 @@ public class GameState : MonoBehaviour
     public float tweenDuration = 0.5f;
     public int correctPiecesCount;
 
-    public int levelIndex = 0;
+    public int _levelIndex = 0;
+    public int levelIndex
+    {
+        get
+        {
+            //return this._levelIndex;
+            return PlayerPrefs.GetInt("levelIndex");
+        }
+        set
+        {
+            Debug.Log("this is your level index");
+            PlayerPrefs.SetInt("levelIndex", value);
+            this._levelIndex = value;
+        }
+    }
 
     public enum State
     {
