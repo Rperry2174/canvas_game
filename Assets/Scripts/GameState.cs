@@ -50,12 +50,36 @@ public class GameState : MonoBehaviour
         CheckForWinner();
     }
 
+
+
+    void OnApplicationPause(bool pauseStatus)
+    {
+        Debug.Log("(OnApplicationPause) resetting board");
+        ResetBoard();
+    }
+
+    void OnApplicationQuit()
+    {
+        Debug.Log("Application ending after " + Time.time + " seconds");
+        Debug.Log("(OnApplicationQuit) resetting board");
+        ResetBoard();
+    }
+
+
     public void StartGame()
     {
         ShuffleUnits();
         RespawnPieces();
         currentGameState = State.gamePlay;
     }
+
+
+
+
+
+
+
+
 
     public void GoToNextLevel()
     {
