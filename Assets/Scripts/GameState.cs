@@ -77,7 +77,20 @@ public class GameState : MonoBehaviour
 
 
 
+    public void DestroyAllPieces()
+    {
+        unitImageList.Clear();
 
+        var allImageSpawners = FindObjectsOfType<ImageSpawner>();
+        foreach (ImageSpawner imageSpawner in allImageSpawners)
+        {
+            imageSpawner.DestroyPieces();
+        };
+        foreach (ImageSpawner imageSpawner in allImageSpawners)
+        {
+            imageSpawner.SpawnPieces();
+        };
+    }
 
 
 
@@ -91,18 +104,7 @@ public class GameState : MonoBehaviour
             levelIndex += 1;
         }
 
-        unitImageList.Clear();
-
-        var allImageSpawners = FindObjectsOfType<ImageSpawner>();
-        foreach(ImageSpawner imageSpawner in allImageSpawners)
-        {
-            imageSpawner.DestroyPieces();
-        };
-        foreach (ImageSpawner imageSpawner in allImageSpawners)
-        {
-            imageSpawner.SpawnPieces();
-        };
-
+        DestroyAllPieces();
         //ShuffleUnits();
         //RespawnPieces();
         ResetBoard();
