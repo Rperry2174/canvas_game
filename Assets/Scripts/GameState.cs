@@ -59,7 +59,14 @@ public class GameState : MonoBehaviour
 
     public void GoToNextLevel()
     {
-        levelIndex += 1;
+        if(levelIndex == unitImageList.Count - 1)
+        {
+            levelIndex = 0;
+        } else
+        {
+            levelIndex += 1;
+        }
+
         unitImageList.Clear();
 
         var allImageSpawners = FindObjectsOfType<ImageSpawner>();

@@ -334,7 +334,7 @@ PrefabInstance:
     - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
         type: 3}
       propertyPath: targetVideoClipsArr.Array.size
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
         type: 3}
@@ -382,7 +382,7 @@ PrefabInstance:
         type: 3}
       propertyPath: targetVideoClipsArr.Array.data[7]
       value: 
-      objectReference: {fileID: 32900000, guid: ba2981c96db4240139066b379c066878,
+      objectReference: {fileID: 32900000, guid: 62614a5c7a4254ac2a016f0bf482749b,
         type: 3}
     - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
         type: 3}
@@ -399,6 +399,11 @@ PrefabInstance:
     - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
         type: 3}
       propertyPath: levelIndex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
+        type: 3}
+      propertyPath: _levelIndex
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
