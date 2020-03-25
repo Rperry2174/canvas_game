@@ -52,17 +52,20 @@ public class GameState : MonoBehaviour
 
 
 
-    void OnApplicationPause(bool pauseStatus)
-    {
-        Debug.Log("(OnApplicationPause) resetting board");
-        ResetBoard();
-    }
+    //void OnApplicationPause(bool pauseStatus)
+    //{
+    //    Debug.Log("(OnApplicationPause) resetting board");
+    //    ResetBoard();
+    //}
 
     void OnApplicationQuit()
     {
         Debug.Log("Application ending after " + Time.time + " seconds");
         Debug.Log("(OnApplicationQuit) resetting board");
         ResetBoard();
+
+        Debug.Log("(OnApplicationQuit) destroying all pieces in application");
+        DestroyAllPieces();
     }
 
 
@@ -96,18 +99,19 @@ public class GameState : MonoBehaviour
 
     public void GoToNextLevel()
     {
-        if(levelIndex == unitImageList.Count - 1)
-        {
-            levelIndex = 0;
-        } else
-        {
-            levelIndex += 1;
-        }
-
         DestroyAllPieces();
         //ShuffleUnits();
         //RespawnPieces();
         ResetBoard();
+
+        if (levelIndex == unitImageList.Count - 1)
+        {
+            levelIndex = 0;
+        }
+        else
+        {
+            levelIndex += 1;
+        }
     }
 
     public void ResetBoard()
