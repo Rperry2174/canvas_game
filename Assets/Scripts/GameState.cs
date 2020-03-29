@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
+using DeltaDNA;
 
 public class GameState : MonoBehaviour
 {
@@ -112,6 +113,12 @@ public class GameState : MonoBehaviour
         {
             levelIndex += 1;
         }
+
+        // Build a game event with a couple of event parameters
+        GameEvent optionsEvent = new GameEvent("level_complete")
+            .AddParam("level_id", levelIndex);
+
+        DDNA.Instance.RecordEvent(optionsEvent);
     }
 
     public void ResetBoard()
