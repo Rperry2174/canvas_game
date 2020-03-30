@@ -105,7 +105,7 @@ public class GameState : MonoBehaviour
         //RespawnPieces();
         ResetBoard();
 
-        if (levelIndex == unitImageList.Count - 1)
+        if (levelIndex + 1 >= unitImageList.Count - 1)
         {
             levelIndex = 0;
         }
