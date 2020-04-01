@@ -2,7 +2,7 @@
 <configuration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <environment_key_dev>12541602093257025162340971015855</environment_key_dev>
   <environment_key_live>12541610587723996485516002215855</environment_key_live>
-  <environment_key>0</environment_key>
+  <environment_key>1</environment_key>
   <collect_url>https://collect16605vdpzz.deltadna.net/collect/api</collect_url>
   <engage_url>https://engage16605vdpzz.deltadna.net</engage_url>
   <hash_secret />
