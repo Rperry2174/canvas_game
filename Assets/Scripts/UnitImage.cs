@@ -14,6 +14,8 @@ public class UnitImage : MonoBehaviour
     public RawImage childImage;
     public GameState gameState;
     public GameObject selectedFrame;
+    public Color greenColor = new Color(0.0f, 255.0f, 0.0f, 255.0f);
+    public Color blankColor = new Color(255.0f, 255.0f, 255.0f, 255.0f);
 
     public VideoPlayer videoPlayer;
     public bool isAnswerKeyChild;
@@ -27,6 +29,10 @@ public class UnitImage : MonoBehaviour
         currentIndex = unitIndex;
         videoPlayer.clip = gameState.targetVideoClipsArr[gameState.levelIndex];
         isAnswerKeyChild = gameObject.transform.parent.GetComponent<ImageSpawner>().isAnswerKey;
+        if(isAnswerKeyChild)
+        {
+            selectedFrame.GetComponent<Image>().color = greenColor;
+        }
     }
 
     void Update()
@@ -52,7 +58,15 @@ public class UnitImage : MonoBehaviour
     {
         if(isAnswerKeyChild && gameState.currentGameState == GameState.State.gamePlay)
         {
-            selectedFrame.SetActive(gameState.unitImageList[unitIndex].unitIndex == unitIndex);
+            if (gameState.unitImageList[unitIndex].unitIndex == unitIndex)
+            {
+                selectedFrame.SetActive(true);
+                childImage.color = greenColor;
+            }
+        }
+        else
+        {
+            childImage.color = blankColor;
         }
     }
 
