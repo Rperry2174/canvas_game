@@ -97,7 +97,7 @@ public class GameState : MonoBehaviour
     }
 
 
-
+    // Any changes made here also make on GoToLevel(int newLevel) below
     public void GoToNextLevel()
     {
         DestroyAllPieces();
@@ -112,6 +112,30 @@ public class GameState : MonoBehaviour
         else
         {
             levelIndex += 1;
+        }
+
+        // Build a game event with a couple of event parameters
+        GameEvent optionsEvent = new GameEvent("level_complete")
+            .AddParam("level_id", levelIndex);
+
+        DDNA.Instance.RecordEvent(optionsEvent);
+    }
+
+    // Any changes made here also make on GoToNextLevel() above
+    public void GoToLevel(int newLevel)
+    {
+        DestroyAllPieces();
+        //ShuffleUnits();
+        //RespawnPieces();
+        ResetBoard();
+
+        if (newLevel >= unitImageList.Count - 1)
+        {
+            levelIndex = 0;
+        }
+        else
+        {
+            levelIndex = newLevel;
         }
 
         // Build a game event with a couple of event parameters
