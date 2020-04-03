@@ -12,6 +12,7 @@ public class GameState : MonoBehaviour
 
     public float tweenDuration = 0.5f;
     public int correctPiecesCount;
+    public State currentGameState;
 
     public int _levelIndex = 0;
     public int levelIndex
@@ -32,18 +33,16 @@ public class GameState : MonoBehaviour
     public enum State
     {
         none,
+        levelSelect,
         levelTitle,
         gamePlay,
         levelComplete
     }
 
-    public State currentGameState = State.none;
-
-
     void Start()
     {
         //ShuffleUnits();
-        currentGameState = State.levelTitle;
+        currentGameState = State.levelSelect;
     }
 
     void Update()
@@ -76,10 +75,6 @@ public class GameState : MonoBehaviour
         RespawnPieces();
         currentGameState = State.gamePlay;
     }
-
-
-
-
 
     public void DestroyAllPieces()
     {

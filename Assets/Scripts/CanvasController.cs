@@ -13,6 +13,7 @@ public class CanvasController : MonoBehaviour
     public GameObject levelCompletePanel;
     public GameObject gamePlayPanel;
     public GameObject backgroundImage;
+    public GameObject levelSelectPanel;
     public GameObject zigZagImage;
 
     public Color backgroundColor = Color.white;
@@ -34,6 +35,7 @@ public class CanvasController : MonoBehaviour
     {
         levelText.text = "Level " + (gameState.levelIndex + 1).ToString();
 
+        levelSelectPanel.gameObject.SetActive(gameState.currentGameState == GameState.State.levelSelect);
         levelTitlePanel.gameObject.SetActive(gameState.currentGameState == GameState.State.levelTitle);
         slider.gameObject.SetActive(gameState.currentGameState == GameState.State.gamePlay);
         levelCompletePanel.gameObject.SetActive(gameState.currentGameState == GameState.State.levelComplete);
