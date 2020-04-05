@@ -100,7 +100,7 @@ public class GameState : MonoBehaviour
         //RespawnPieces();
         ResetBoard();
 
-        if (levelIndex + 1 >= unitImageList.Count - 1)
+        if (levelIndex > targetVideoClipsArr.Length - 1)
         {
             levelIndex = 0;
         }
@@ -124,7 +124,7 @@ public class GameState : MonoBehaviour
         //RespawnPieces();
         ResetBoard();
 
-        if (newLevel >= unitImageList.Count - 1)
+        if (newLevel > targetVideoClipsArr.Length - 1)
         {
             levelIndex = 0;
         }
