@@ -150,6 +150,7 @@ public class GameState : MonoBehaviour
     public void SwapUnitsWith(UnitImage newUnitImage)
     {
         Debug.Log("Swapping: " + selectedUnitImage.unitIndex + " with " + newUnitImage.unitIndex);
+        Handheld.Vibrate();
 
         UnitImage tmp = newUnitImage;
 
