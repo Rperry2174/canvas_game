@@ -476,201 +476,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameState
       objectReference: {fileID: 0}
-    - target: {fileID: 4141664512575755564, guid: b7539b8a4de02403bb7a53e5733a5571,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
-        type: 3}
-      propertyPath: targetVideoClipsArr.Array.size
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
-        type: 3}
-      propertyPath: videoClipsBackgroundArr.Array.size
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
-        type: 3}
-      propertyPath: targetVideoClipsArr.Array.data[0]
-      value: 
-      objectReference: {fileID: 32900000, guid: b1898d32b0f9148cb8d6db820e9d1d33,
-        type: 3}
-    - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
-        type: 3}
-      propertyPath: targetVideoClipsArr.Array.data[1]
-      value: 
-      objectReference: {fileID: 32900000, guid: 1e9af0d0fdd704bd28e71c6b0efa8f92,
-        type: 3}
-    - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
-        type: 3}
-      propertyPath: targetVideoClipsArr.Array.data[2]
-      value: 
-      objectReference: {fileID: 32900000, guid: af37509f80bed400ea4e329e1bf3cbfd,
-        type: 3}
-    - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
-        type: 3}
-      propertyPath: targetVideoClipsArr.Array.data[3]
-      value: 
-      objectReference: {fileID: 32900000, guid: ffdab95dcc47d4c3c9e0e57be2fbd945,
-        type: 3}
-    - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
-        type: 3}
-      propertyPath: targetVideoClipsArr.Array.data[4]
-      value: 
-      objectReference: {fileID: 32900000, guid: a6b66241fd8a84df8831579a78a7b213,
-        type: 3}
-    - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
-        type: 3}
-      propertyPath: targetVideoClipsArr.Array.data[5]
-      value: 
-      objectReference: {fileID: 32900000, guid: e41d4c99a5b45446b9aa32c9a143df71,
-        type: 3}
-    - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
-        type: 3}
-      propertyPath: targetVideoClipsArr.Array.data[6]
-      value: 
-      objectReference: {fileID: 32900000, guid: 6a00bf46eeace49d8a740302a8c93f97,
-        type: 3}
-    - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
-        type: 3}
-      propertyPath: targetVideoClipsArr.Array.data[7]
-      value: 
-      objectReference: {fileID: 32900000, guid: ecfe7ef2d2c034f45a2e7cc3c51fb3af,
-        type: 3}
-    - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
-        type: 3}
-      propertyPath: targetVideoClipsArr.Array.data[8]
-      value: 
-      objectReference: {fileID: 32900000, guid: dcc8ca332ce6344c7a863b146c4a4ccc,
-        type: 3}
-    - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
-        type: 3}
-      propertyPath: targetVideoClipsArr.Array.data[9]
-      value: 
-      objectReference: {fileID: 32900000, guid: 5cecc2891bc024aef999334413d9e786,
-        type: 3}
-    - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
-        type: 3}
-      propertyPath: levelIndex
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
-        type: 3}
-      propertyPath: _levelIndex
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
-        type: 3}
-      propertyPath: targetVideoClipsArr.Array.data[10]
-      value: 
-      objectReference: {fileID: 32900000, guid: d90a76866ae28477581040f7adc4dd90,
-        type: 3}
-    - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
-        type: 3}
-      propertyPath: targetVideoClipsArr.Array.data[11]
-      value: 
-      objectReference: {fileID: 32900000, guid: c9b972bb29b964aeaa9893a54f1ebfa7,
-        type: 3}
-    - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
-        type: 3}
-      propertyPath: targetVideoClipsArr.Array.data[12]
-      value: 
-      objectReference: {fileID: 32900000, guid: b76fdf91ee6744b13963f0df33bddc1d,
-        type: 3}
-    - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
-        type: 3}
-      propertyPath: targetVideoClipsArr.Array.data[13]
-      value: 
-      objectReference: {fileID: 32900000, guid: 5f04ea27020a049cf9f781a0ebcd71c8,
-        type: 3}
-    - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
-        type: 3}
-      propertyPath: targetVideoClipsArr.Array.data[14]
-      value: 
-      objectReference: {fileID: 32900000, guid: 20ec001591c1849148117faa8b20a5f3,
-        type: 3}
-    - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
-        type: 3}
-      propertyPath: currentGameState
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
-        type: 3}
-      propertyPath: videoClipsBackgroundArr.Array.data[0]
-      value: '#ffffff'
-      objectReference: {fileID: 0}
-    - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
-        type: 3}
-      propertyPath: videoClipsBackgroundArr.Array.data[1]
-      value: '#60FFBD'
-      objectReference: {fileID: 0}
-    - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
-        type: 3}
-      propertyPath: videoClipsBackgroundArr.Array.data[2]
-      value: '#ffffff'
-      objectReference: {fileID: 0}
-    - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
-        type: 3}
-      propertyPath: videoClipsBackgroundArr.Array.data[3]
-      value: '#ffffff'
-      objectReference: {fileID: 0}
-    - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
-        type: 3}
-      propertyPath: videoClipsBackgroundArr.Array.data[4]
-      value: '#60FFBD'
-      objectReference: {fileID: 0}
-    - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
-        type: 3}
-      propertyPath: videoClipsBackgroundArr.Array.data[5]
-      value: '#60FFBD'
-      objectReference: {fileID: 0}
-    - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
-        type: 3}
-      propertyPath: videoClipsBackgroundArr.Array.data[6]
-      value: '#ffffff'
-      objectReference: {fileID: 0}
-    - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
-        type: 3}
-      propertyPath: videoClipsBackgroundArr.Array.data[7]
-      value: '#60FFBD'
-      objectReference: {fileID: 0}
-    - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
-        type: 3}
-      propertyPath: videoClipsBackgroundArr.Array.data[8]
-      value: '#ffffff'
-      objectReference: {fileID: 0}
-    - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
-        type: 3}
-      propertyPath: videoClipsBackgroundArr.Array.data[9]
-      value: '#60FFBD'
-      objectReference: {fileID: 0}
-    - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
-        type: 3}
-      propertyPath: videoClipsBackgroundArr.Array.data[10]
-      value: '#ffffff'
-      objectReference: {fileID: 0}
-    - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
-        type: 3}
-      propertyPath: videoClipsBackgroundArr.Array.data[11]
-      value: '#60FFBD'
-      objectReference: {fileID: 0}
-    - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
-        type: 3}
-      propertyPath: videoClipsBackgroundArr.Array.data[12]
-      value: '#ffffff'
-      objectReference: {fileID: 0}
-    - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
-        type: 3}
-      propertyPath: videoClipsBackgroundArr.Array.data[14]
-      value: '#ffffff'
-      objectReference: {fileID: 0}
-    - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
-        type: 3}
-      propertyPath: videoClipsBackgroundArr.Array.data[13]
-      value: '#60FFBD'
-      objectReference: {fileID: 0}
     - target: {fileID: 4141664512575755565, guid: b7539b8a4de02403bb7a53e5733a5571,
         type: 3}
       propertyPath: canvasController
@@ -741,10 +546,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 284499359}
-    - target: {fileID: 1380091773, guid: 222a0139458e443199d4a4a4779a0c0e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1481543249, guid: 222a0139458e443199d4a4a4779a0c0e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -762,26 +563,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 284499359}
-    - target: {fileID: 4353255208140486830, guid: 222a0139458e443199d4a4a4779a0c0e,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4353255208140486830, guid: 222a0139458e443199d4a4a4779a0c0e,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4353255208140486830, guid: 222a0139458e443199d4a4a4779a0c0e,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4353255208140486830, guid: 222a0139458e443199d4a4a4779a0c0e,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4690159565388152280, guid: 222a0139458e443199d4a4a4779a0c0e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1147,14 +928,14 @@ PrefabInstance:
       objectReference: {fileID: 224816344}
     - target: {fileID: 6971654271776284801, guid: e53e5e9ca1ff04ab389bd3992e88024e,
         type: 3}
-      propertyPath: zigZagImage
-      value: 
-      objectReference: {fileID: 224816344}
-    - target: {fileID: 6971654271776284801, guid: e53e5e9ca1ff04ab389bd3992e88024e,
-        type: 3}
       propertyPath: levelSelectPanel
       value: 
       objectReference: {fileID: 1380091773}
+    - target: {fileID: 6971654271776284801, guid: e53e5e9ca1ff04ab389bd3992e88024e,
+        type: 3}
+      propertyPath: zigZagImage
+      value: 
+      objectReference: {fileID: 224816344}
     - target: {fileID: 6971654271776284830, guid: e53e5e9ca1ff04ab389bd3992e88024e,
         type: 3}
       propertyPath: m_Name
