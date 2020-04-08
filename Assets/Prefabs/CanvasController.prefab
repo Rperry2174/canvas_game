@@ -51,6 +51,5 @@ MonoBehaviour:
   levelCompletePanel: {fileID: 0}
   gamePlayPanel: {fileID: 0}
   backgroundImage: {fileID: 0}
+  levelSelectPanel: {fileID: 0}
   zigZagImage: {fileID: 0}
-  backgroundColor: {r: 0.78039217, g: 0.87058824, b: 0.67058825, a: 1}
-  zigZagColor: {r: 0.3882353, g: 0.85882354, b: 0.68235296, a: 1}

@@ -6,9 +6,11 @@ using DeltaDNA;
 
 public class GameState : MonoBehaviour
 {
-    public List<UnitImage> unitImageList;
     public UnitImage selectedUnitImage;
+    public CanvasController canvasController;
+    public List<UnitImage> unitImageList;
     public VideoClip[] targetVideoClipsArr;
+    public string[] videoClipsBackgroundArr;
 
     public float tweenDuration = 0.5f;
     public int correctPiecesCount;
@@ -109,6 +111,9 @@ public class GameState : MonoBehaviour
             levelIndex += 1;
         }
 
+        canvasController.SetBackgroundColorFromHex(videoClipsBackgroundArr[levelIndex]);
+
+
         // Build a game event with a couple of event parameters
         GameEvent optionsEvent = new GameEvent("level_complete")
             .AddParam("level_id", levelIndex);
@@ -132,6 +137,8 @@ public class GameState : MonoBehaviour
         {
             levelIndex = newLevel;
         }
+
+        canvasController.SetBackgroundColorFromHex(videoClipsBackgroundArr[levelIndex]);
 
         // Build a game event with a couple of event parameters
         GameEvent optionsEvent = new GameEvent("level_complete")

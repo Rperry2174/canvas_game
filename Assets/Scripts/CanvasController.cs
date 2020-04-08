@@ -16,18 +16,25 @@ public class CanvasController : MonoBehaviour
     public GameObject levelSelectPanel;
     public GameObject zigZagImage;
 
-    public Color backgroundColor = Color.white;
-    public Color zigZagColor = Color.white;
+
 
     // Start is called before the first frame update
     void Start()
     {
         gameState = FindObjectOfType<GameState>();
+    }
 
-        Debug.Log("Currnet color: " + backgroundImage.GetComponent<Image>().color);
-        backgroundImage.GetComponent<Image>().color = backgroundColor;
-        zigZagImage.GetComponent<Image>().color = zigZagColor;
-
+    public void SetBackgroundColorFromHex(string hex)
+    {
+        if (ColorUtility.TryParseHtmlString(hex, out Color newCol))
+        {
+            backgroundImage.GetComponent<Image>().color = newCol;
+        }
+        else
+        {
+            Debug.Log("invalid hex color for background. Setting it to white instead");
+            backgroundImage.GetComponent<Image>().color = Color.white;
+        }
     }
 
     // Update is called once per frame

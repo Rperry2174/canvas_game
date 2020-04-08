@@ -43,13 +43,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56e4d227138c34902b84570861294b01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitImageList: []
   selectedUnitImage: {fileID: 0}
+  canvasController: {fileID: 0}
+  unitImageList: []
   targetVideoClipsArr:
-  - {fileID: 32900000, guid: 2e762ed465239477ea32aecdf2452191, type: 3}
-  - {fileID: 32900000, guid: 082e8583b3ac94d32a0b89cc31b7c77b, type: 3}
-  - {fileID: 32900000, guid: 068fc278aa1d243c0a7a41f2d5cdfd73, type: 3}
+  - {fileID: 32900000, guid: b1898d32b0f9148cb8d6db820e9d1d33, type: 3}
+  - {fileID: 32900000, guid: 1e9af0d0fdd704bd28e71c6b0efa8f92, type: 3}
+  - {fileID: 32900000, guid: af37509f80bed400ea4e329e1bf3cbfd, type: 3}
+  - {fileID: 32900000, guid: ffdab95dcc47d4c3c9e0e57be2fbd945, type: 3}
+  - {fileID: 32900000, guid: a6b66241fd8a84df8831579a78a7b213, type: 3}
+  - {fileID: 32900000, guid: e41d4c99a5b45446b9aa32c9a143df71, type: 3}
+  - {fileID: 32900000, guid: 6a00bf46eeace49d8a740302a8c93f97, type: 3}
+  - {fileID: 32900000, guid: ecfe7ef2d2c034f45a2e7cc3c51fb3af, type: 3}
+  - {fileID: 32900000, guid: dcc8ca332ce6344c7a863b146c4a4ccc, type: 3}
+  - {fileID: 32900000, guid: 5cecc2891bc024aef999334413d9e786, type: 3}
+  - {fileID: 32900000, guid: d90a76866ae28477581040f7adc4dd90, type: 3}
+  - {fileID: 32900000, guid: c9b972bb29b964aeaa9893a54f1ebfa7, type: 3}
+  - {fileID: 32900000, guid: b76fdf91ee6744b13963f0df33bddc1d, type: 3}
+  - {fileID: 32900000, guid: 5f04ea27020a049cf9f781a0ebcd71c8, type: 3}
+  - {fileID: 32900000, guid: 20ec001591c1849148117faa8b20a5f3, type: 3}
+  videoClipsBackgroundArr:
+  - '#ffffff'
+  - '#60FFBD'
+  - '#ffffff'
+  - '#ffffff'
+  - '#60FFBD'
+  - '#60FFBD'
+  - '#ffffff'
+  - '#60FFBD'
+  - '#ffffff'
+  - '#60FFBD'
+  - '#ffffff'
+  - '#60FFBD'
+  - '#ffffff'
+  - '#60FFBD'
+  - '#ffffff'
   tweenDuration: 0.5
   correctPiecesCount: 0
-  levelIndex: 0
-  currentGameState: 0
+  currentGameState: 1
+  _levelIndex: 7
