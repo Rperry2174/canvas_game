@@ -673,6 +673,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7661830519472188867, guid: 222a0139458e443199d4a4a4779a0c0e,
+        type: 3}
+      propertyPath: m_Name
+      value: AnswerKeyFrame
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317303642416386170, guid: 222a0139458e443199d4a4a4779a0c0e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -311.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317303642416386170, guid: 222a0139458e443199d4a4a4779a0c0e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 585.3001
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317303642416386170, guid: 222a0139458e443199d4a4a4779a0c0e,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 272.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317303642416386170, guid: 222a0139458e443199d4a4a4779a0c0e,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 250.2
+      objectReference: {fileID: 0}
     - target: {fileID: 8852162528968569042, guid: 222a0139458e443199d4a4a4779a0c0e,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
