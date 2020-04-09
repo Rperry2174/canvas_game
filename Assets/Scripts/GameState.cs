@@ -93,6 +93,10 @@ public class GameState : MonoBehaviour
         };
     }
 
+    public void GoToLevelSelect()
+    {
+        currentGameState = State.levelSelect;
+    }
 
     // Any changes made here also make on GoToLevel(int newLevel) below
     public void GoToNextLevel()
@@ -151,7 +155,6 @@ public class GameState : MonoBehaviour
     {
         selectedUnitImage = null;
         currentGameState = State.levelTitle;
-
     }
 
     public void SwapUnitsWith(UnitImage newUnitImage)
